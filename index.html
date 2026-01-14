@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H.N.T - Human, Nature, Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cinzel"', 'serif'],
+              sans: ['"Noto Sans KR"', 'sans-serif'],
+              montserrat: ['"Montserrat"', 'sans-serif'],
+            },
+            colors: {
+              hnt: {
+                orange: '#E85D04', // Human/Warmth
+                green: '#2D6A4F',  // Nature/Growth
+                blue: '#3B82F6',   // Technology/Innovation (Updated to Tech Blue)
+                navy: '#0A192F',   // Trustworthy Deep Navy Background
+                dark: '#0B0C10',
+                gray: '#1F2833',
+                light: '#C5C6C7',
+              },
+              gold: {
+                100: '#F9F1D8',
+                200: '#F0DEAA',
+                300: '#E6CB7D',
+                400: '#DDB853',
+                500: '#D4A52A', 
+              }
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'spin-slow': 'spin 15s linear infinite',
+              'spin-slower': 'spin 25s linear infinite',
+              'reverse-spin': 'spin 20s linear infinite reverse',
+              'fade-in-down': 'fadeInDown 0.3s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        background-color: #0B0C10;
+      }
+      body {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?external=react,react-dom",
+    "@remix-run/router": "https://esm.sh/@remix-run/router@1.15.3",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "url": "https://esm.sh/url@^0.11.4"
+  }
+}
+</script>
+</head>
+  <body class="bg-transparent text-white antialiased selection:bg-hnt-orange selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>
